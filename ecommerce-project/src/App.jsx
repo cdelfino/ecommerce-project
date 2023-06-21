@@ -1,10 +1,18 @@
+import { useState } from "react";
 import Navbar from "./components/layout/navbar/Navbar";
 import ItemList from "./components/page/itemList/ItemList";
+
 function App() {
+  const [greeting, setGreeting] = useState("Hola, ¿cómo estás?");
+
+  const cambiarGreeting = (nuevoGreeting) => {
+    setGreeting(nuevoGreeting);
+  };
+
   return (
-    <div >
+    <div>
       <Navbar />
-      <ItemList />
+      <ItemList greeting={greeting} cambiarGreeting={cambiarGreeting} />
     </div>
   );
 }
