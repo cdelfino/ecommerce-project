@@ -1,11 +1,11 @@
 .nav {
   color: rgb(132, 91, 98);
-  font-family: "Raleway", sans-serif;
 }
 
 .navigation {
-  height: 89px;
+  height: 75px;
   background-color: #b67484;
+  margin-bottom: 20px;
 }
 
 .brand {
@@ -20,10 +20,10 @@
 }
 
 .navContainer {
-  margin: 0 auto;
+  margin: auto 65px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
   box-shadow: 0 0 0 1px rgb(20 23 28 / 2%), 0 5px 7px 0 rgb(20 23 28 / 2%);
 }
@@ -51,7 +51,7 @@
   font-size: 16px;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
 }
 
 .navLinkAlt {

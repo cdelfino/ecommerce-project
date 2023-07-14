@@ -1,0 +1,74 @@
+/* Counter.module.css */
+
+.counterContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.counterSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterSection:first-of-type {
+  border: 2px solid grey;
+  border-radius: 28px;
+  font-weight: bold;
+  gap: 18px;
+  padding: 0 18px;
+}
+
+.counterButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px;
+  margin: 4px;
+  font-weight: bold;
+  position: relative;
+}
+
+.counterButton::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.5s, transform 0.3s; /* Transiciones suaves */
+  z-index: -1;
+}
+
+.counterButton:hover::before {
+  opacity: 1; /* Mostrar en el hover */
+
+}
+
+.counterValue {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 10px;
+}
+.addButton {
+  background-color: #b67484;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 24px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.addButton:hover {
+  background-color: #8f4c5c;
+  transform: scale(1.01); /* Aumenta ligeramente el tamaño del botón */
+}

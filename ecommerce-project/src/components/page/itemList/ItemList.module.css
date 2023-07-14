@@ -1,0 +1,23 @@
+.hola {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 96%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.product-card {
+  width: calc(25% - 20px); /* El ancho de cada columna será el 25% del contenedor con un espacio de 20px entre ellas */
+  margin-bottom: 20px;
+}
+.container::after {
+  content: "";
+  width: 365px;
+}

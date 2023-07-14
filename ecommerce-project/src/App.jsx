@@ -1,18 +1,23 @@
-import { useState } from "react";
+/*import { useState } from "react";*/
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/navbar/Navbar";
-import ItemList from "./components/page/itemList/ItemList";
+/*import ItemList from "./components/page/itemList/ItemList";*/
+import ItemList from "./components/page/itemList/ItemListContainer";
 
 function App() {
-  const [greeting, setGreeting] = useState("Hola, ¿cómo estás?");
-
-  const cambiarGreeting = (nuevoGreeting) => {
-    setGreeting(nuevoGreeting);
-  };
-
   return (
     <div>
-      <Navbar />
-      <ItemList greeting={greeting} cambiarGreeting={cambiarGreeting} />
+      <BrowserRouter>
+        <Routes>
+          <Route />
+          <Route />
+          <Route />
+          <Route />
+          <Routes />
+          <Navbar />
+          <ItemList />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,13 +1,21 @@
+/* eslint-disable react/prop-types */
+import styles from "./ItemList.module.css";
+import ProductCard from "../../common/productCard/ProductCard";
 
-// eslint-disable-next-line react/prop-types
-const ItemList = ( {greeting, cambiarGreeting} ) => {
+const ItemList = ({ items }) => {
+  console.log("llego al presentacional los items: ", items);
 
   return (
-    <div style={{textAlign:"center"}}>
-        <h3>{greeting}</h3>
-        <button onClick={()=>cambiarGreeting("Bien")}>Cambiar saludo</button>
+    <div className={styles.hola}>
+      <div className={styles.container}>
+        {items.map((item) => (
+          <div className={styles.productCard} key={item.id}>
+            <ProductCard item={item} />
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ItemList
+export default ItemList;
