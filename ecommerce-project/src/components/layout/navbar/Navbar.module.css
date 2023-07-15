@@ -1,78 +1,85 @@
-.nav {
-  color: rgb(132, 91, 98);
-}
-
 .navigation {
-  height: 75px;
   background-color: #b67484;
-  margin-bottom: 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.brandLink {
-  color: pink;
-  text-decoration: none;
 }
 
 .navContainer {
-  margin: auto 120px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 100%;
-  box-shadow: 0 0 0 1px rgb(20 23 28 / 2%), 0 5px 7px 0 rgb(20 23 28 / 2%);
+  align-items: center;
+  padding: 10px;
+  margin: 0 200px;
+}
+
+.brand img {
+  display: block;
+  max-width: 100%;
 }
 
 .navList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: pink;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
+.menuToggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menuToggle img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
 .navListItem {
-  float: left;
-  position: relative;
+  margin-right: 20px;
 }
 
 .navLink {
-  display: block;
-  padding: 0 20px;
-  line-height: 55px;
+  color: #333;
   text-decoration: none;
-  font-size: 16px;
-  color: #ffffff;
+  color: white;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
 }
 
-.navLinkAlt {
-  background: transparent;
-  color: rgb(147, 99, 107);
-}
+@media (max-width: 868px) {
+  .menuToggle {
+    display: block;
+  }
 
-.navLinkHover {
-  color: #432a38;
-}
+  .navList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f8f8f8;
+    padding: 10px;
+  }
 
-.navLinkArrow {
-  padding-left: 4px;
-  content: " \\025BE";
-}
+  .navListItem {
+    margin-bottom: 10px;
+  }
 
-.navSubMenu {
-  min-width: 190px;
-}
+  .nav.open .navList {
+    display: flex;
+    flex-direction: column;
+  }
 
-.navSubMenuLink {
-  padding: 15px;
-  line-height: 20px;
+  .nav.open .menuToggle img:nth-child(2) {
+    opacity: 0;
+  }
 }

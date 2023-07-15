@@ -10,7 +10,7 @@ const ItemList = ({ items }) => {
       <div className={styles.container}>
         {items.map((item) => (
           <div className={styles.productCard} key={item.id}>
-            <ProductCard item={item} />
+            {item.id && <ProductCard item={item} />}
           </div>
         ))}
       </div>

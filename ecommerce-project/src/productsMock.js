@@ -7,7 +7,7 @@ export const products = [
     brand: "maybelline",
     price: "14.99",
     stock: 17,
-    category: "bronzer",
+    category: "bronzers",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const products = [
     brand: "maybelline",
     price: "10.29",
     stock: 34,
-    category: "bronzer",
+    category: "bronzers",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const products = [
     brand: "maybelline",
     price: "15.99",
     stock: 22,
-    category: "eyeshadow",
+    category: "sombras",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const products = [
     brand: "maybelline",
     price: "14.99",
     stock: 8,
-    category: "blush",
+    category: "rubores",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const products = [
     brand: "maybelline",
     price: "10.29",
     stock: 19,
-    category: "blush",
+    category: "rubores",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const products = [
     brand: "maybelline",
     price: "8.29",
     stock: 27,
-    category: "lip liner",
+    category: "labiales",
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const products = [
     brand: "maybelline",
     price: "14.79",
     stock: 9,
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ export const products = [
     brand: "maybelline",
     price: "10.99",
     stock: 29,
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ export const products = [
     brand: "maybelline",
     price: "14.79",
     stock: 15,
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ export const products = [
     stock: 17,
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/24517c6c81c92eda31cd32b6327c1298_ra,w158,h184_pa,w158,h184.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ export const products = [
     stock: 34,
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/c7d967ef502ecd79ab7ab466c4952d82_ra,w158,h184_pa,w158,h184.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ export const products = [
     stock: 22,
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/ccb99ad6ac7f31a2a73454bdbda01d99_ra,w158,h184_pa,w158,h184.jpeg",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 13,
@@ -126,7 +126,7 @@ export const products = [
     price: "32.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_7M81_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 14,
@@ -135,7 +135,7 @@ export const products = [
     price: "28.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_70JW_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 15,
@@ -144,7 +144,7 @@ export const products = [
     price: "26.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_7KXC_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 16,
@@ -153,7 +153,7 @@ export const products = [
     price: "36.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_7C5H01_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 17,
@@ -162,7 +162,7 @@ export const products = [
     price: "28.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_6GTY_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 18,
@@ -171,7 +171,7 @@ export const products = [
     price: "25.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_ZGH001_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 19,
@@ -180,7 +180,7 @@ export const products = [
     price: "17.5",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_ZJE002_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 20,
@@ -189,7 +189,7 @@ export const products = [
     price: "24.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_647J_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 21,
@@ -198,7 +198,7 @@ export const products = [
     price: "28.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_6AL9_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 22,
@@ -207,7 +207,7 @@ export const products = [
     price: "28.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_ZGH6AA_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
   {
     id: 23,
@@ -216,6 +216,6 @@ export const products = [
     price: "28.0",
     image_link:
       "https://www.clinique.com/media/export/cms/products/181x209/clq_6WPR_181x209.png",
-    category: "foundation",
+    category: "bases",
   },
 ];

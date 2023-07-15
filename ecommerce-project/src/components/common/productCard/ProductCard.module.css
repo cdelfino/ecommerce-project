@@ -72,12 +72,16 @@ a {
   padding: 11px 5px;
   margin-top: 15px;
   background-color: inherit;
-  width: 90%;
+  width: 100%;
   font-size: 1.1rem;
+  cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out;
 }
 
+.link {
+  width: 93%;
+}
 
 .productcardbutton:hover {
   background-color: rgb(47, 47, 47);
