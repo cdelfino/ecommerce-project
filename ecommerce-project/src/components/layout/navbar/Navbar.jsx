@@ -23,30 +23,42 @@ const Navbar = () => {
             </Link>
           </li>
           <li className={styles.navListItem}>
-            <Link to="ecommerce-project/bases" className={styles.navLink}>
+            <Link
+              to="ecommerce-project/category/bases"
+              className={styles.navLink}
+            >
               Bases
             </Link>
           </li>
           <li className={styles.navListItem}>
-            <Link to="ecommerce-project/sombras" className={styles.navLink}>
+            <Link
+              to="ecommerce-project/category/sombras"
+              className={styles.navLink}
+            >
               Sombras
             </Link>
           </li>
           <li className={styles.navListItem}>
-            <Link to="ecommerce-project/labiales" className={styles.navLink}>
+            <Link
+              to="ecommerce-project/category/labiales"
+              className={styles.navLink}
+            >
               Labiales
             </Link>
           </li>
           <li className={styles.navListItem}>
             <Link
-              to="/ecommerce-project/rubores"
+              to="/ecommerce-project/category/rubores"
               className={styles.navLink}
             >
               Rubores
             </Link>
           </li>
           <li className={styles.navListItem}>
-            <Link to="ecommerce-project/bronzers" className={styles.navLink}>
+            <Link
+              to="ecommerce-project/category/bronzers"
+              className={styles.navLink}
+            >
               Bronzers
             </Link>
           </li>

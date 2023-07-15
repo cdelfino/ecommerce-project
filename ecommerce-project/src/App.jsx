@@ -12,7 +12,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/ecommerce-project/" element={<ItemListContainer />} />
           <Route
-            path="/ecommerce-project/:categoryName"
+            path="/ecommerce-project/category/:categoryName"
             element={<ItemListContainer />}
           />
 
