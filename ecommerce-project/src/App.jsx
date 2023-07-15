@@ -1,24 +1,20 @@
-/*import { useState } from "react";*/
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/layout/navbar/Navbar";
-/*import ItemList from "./components/page/itemList/ItemList";*/
-import ItemList from "./components/page/itemList/ItemListContainer";
+import Layout from "./components/layout/Layout/Layout";
+import ItemListContainer from "./components/page/itemList/ItemListContainer";
+import Error404 from "./components/error/Error404";
+import CartContainer from "./components/page/cart/CartContainer";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route />
-          <Route />
-          <Route />
-          <Route />
-          <Routes />
-          <Navbar />
-          <ItemList />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/ecommerce-project/" element={<ItemListContainer />} />
+          <Route path="/ecommerce-project/cart" element={<CartContainer />} />
+        </Route>
+        <Route path="/ecommerce-project/*" element={<Error404 />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

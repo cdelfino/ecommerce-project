@@ -1,6 +1,7 @@
 import styles from "./Navbar.module.css";
 import CartWidget from "../../common/cartWidget/CartWidget";
 
+
 const Navbar = () => {
 return (
   <div className={styles.navigation}>
