@@ -3,11 +3,9 @@ import styles from "./ItemList.module.css";
 import ProductCard from "../../common/productCard/ProductCard";
 
 const ItemList = ({ items }) => {
-  console.log("llego al presentacional los items: ", items);
-
   return (
-    <div className={styles.hola}>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className={styles.grid}>
         {items.map((item) => (
           <div className={styles.productCard} key={item.id}>
             {item.id && <ProductCard item={item} />}

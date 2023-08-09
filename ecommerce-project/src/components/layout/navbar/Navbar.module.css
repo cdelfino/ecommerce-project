@@ -1,13 +1,16 @@
 .navigation {
   background-color: #b67484;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .navContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  width: 80%;
   padding: 10px;
-  margin: 0 200px;
 }
 
 .brand img {
@@ -18,19 +21,6 @@
 .navList {
   display: flex;
   align-items: center;
-}
-
-.menuToggle {
-  display: none;
-  cursor: pointer;
-}
-
-.menuToggle img {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin-bottom: 5px;
-  transition: transform 0.3s ease-in-out;
 }
 
 .navList {
@@ -48,15 +38,22 @@
 }
 
 .navLink {
-  color: #333;
   text-decoration: none;
-  color: white;
   text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-@media (max-width: 868px) {
-  .menuToggle {
-    display: block;
+@media (max-width: 1139px) {
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
   }
 
   .navList {
@@ -73,13 +70,16 @@
   .navListItem {
     margin-bottom: 10px;
   }
+}
 
-  .nav.open .navList {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 1000px) {
+  .navContainer {
+    width: 85%;
   }
+}
 
-  .nav.open .menuToggle img:nth-child(2) {
-    opacity: 0;
+@media (max-width: 900px) {
+  .navContainer {
+    width: 97%;
   }
 }

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75vh;
+  height: 87vh;
 }
 
 .itemDetail {
@@ -12,6 +12,7 @@
   gap: 40px;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .productImage {

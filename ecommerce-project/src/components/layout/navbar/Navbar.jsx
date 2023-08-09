@@ -1,13 +1,14 @@
 import CartWidget from "../../common/cartWidget/CartWidget";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.navigation}>
       <div className={styles.navContainer}>
         <div className={styles.brand}>
-          <Link to="ecommerce-project/">
+          <Link to="/ecommerce-project/">
             <img
               src="https://res.cloudinary.com/dog4ri0x9/image/upload/v1686980951/logo_ojlcmn.png"
               width="210"
@@ -18,56 +19,57 @@ const Navbar = () => {
 
         <div className={styles.navList}>
           <li className={styles.navListItem}>
-            <Link to="ecommerce-project/" className={styles.navLink}>
+            <button
+              onClick={() => navigate("/ecommerce-project")}
+              className={styles.navLink}
+            >
               Todos
-            </Link>
+            </button>
           </li>
           <li className={styles.navListItem}>
-            <Link
-              to="ecommerce-project/category/bases"
+            <button
+              onClick={() => navigate("/ecommerce-project/category/bases")}
               className={styles.navLink}
             >
               Bases
-            </Link>
+            </button>
           </li>
           <li className={styles.navListItem}>
-            <Link
-              to="ecommerce-project/category/sombras"
+            <button
+              onClick={() => navigate("/ecommerce-project/category/sombras")}
               className={styles.navLink}
             >
               Sombras
-            </Link>
+            </button>
           </li>
           <li className={styles.navListItem}>
-            <Link
-              to="ecommerce-project/category/labiales"
+            <button
+              onClick={() => navigate("/ecommerce-project/category/labiales")}
               className={styles.navLink}
             >
               Labiales
-            </Link>
+            </button>
           </li>
           <li className={styles.navListItem}>
-            <Link
-              to="/ecommerce-project/category/rubores"
+            <button
+              onClick={() => navigate("/ecommerce-project/category/rubores")}
               className={styles.navLink}
             >
               Rubores
-            </Link>
+            </button>
           </li>
           <li className={styles.navListItem}>
-            <Link
-              to="ecommerce-project/category/bronzers"
+            <button
+              onClick={() => navigate("/ecommerce-project/category/bronzers")}
               className={styles.navLink}
             >
               Bronzers
-            </Link>
+            </button>
           </li>
         </div>
-        <div className={styles.navListItem}>
-          <Link to="#" className={styles.navLink}>
-            <CartWidget />
-          </Link>
-        </div>
+        
+          <CartWidget className={styles.navLink}/>
+      
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ a {
   align-items: center;
   text-align: center;
   width: 20.5rem;
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
   padding: 12px 9px;
   background-color: white;
@@ -27,7 +27,6 @@ a {
   text-align: center;
   width: 20.5rem;
   background-color: white;
-  border-radius: 3px;
   overflow: hidden;
   box-shadow: 2px 2px 19px 0px rgb(80 80 80 / 10%);
   cursor: pointer;

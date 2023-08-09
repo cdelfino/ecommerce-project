@@ -1,23 +1,39 @@
-.hola {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* ... otros estilos ... */
 
 .container {
-  width: 96%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
 .product-card {
-  width: calc(25% - 20px); /* El ancho de cada columna será el 25% del contenedor con un espacio de 20px entre ellas */
   margin-bottom: 20px;
 }
-.container::after {
-  content: "";
-  width: 365px;
+
+/* Media queries para ajustar el número de columnas en pantallas más pequeñas */
+@media (max-width: 1600px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1325px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
