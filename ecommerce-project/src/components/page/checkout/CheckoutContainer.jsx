@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import styles from "./CheckoutContainer.module.css";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
-import { db } from "../../../firebaseConfig";
+import { db } from "../../../firebaseconfig";
 import {
   addDoc,
   collection,
