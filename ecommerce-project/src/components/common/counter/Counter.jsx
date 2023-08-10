@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import styles from "./Counter.module.css";
 
 const Counter = ({ counter, restar, sumar, onAdd }) => {

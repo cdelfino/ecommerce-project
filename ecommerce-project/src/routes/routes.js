@@ -1,6 +1,7 @@
 import ItemListContainer from "../components/page/itemList/ItemListContainer";
 import CartContainer from "../components/page/cart/CartContainer";
 import ItemDetail from "../components/page/itemDetail/ItemDetail";
+import CheckoutContainer from "../components/page/checkout/CheckoutContainer";
 export const routes = [
   {
     id: "home",
@@ -21,5 +22,10 @@ export const routes = [
     id: "cart",
     path: "/ecommerce-project/cart",
     Element: CartContainer,
-  }
+  },
+  {
+    id: "checkout",
+    path: "/ecommerce-project/checkout",
+    Element: CheckoutContainer,
+  },
 ];

@@ -6,23 +6,42 @@ import { useParams } from "react-router-dom";
 import styles from "./ItemDetail.module.css";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
+import { db } from "../../../firebaseconfig";
+import { getDoc, collection, doc } from "firebase/firestore";
+import { DotLoader } from "react-spinners";
 
 const ItemDetail = () => {
   const { addToCart, getQuantityById } = useContext(CartContext);
 
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true); // Agrega el estado de carga
+  const loaderStyles = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "80vh",
+  };
   const { id } = useParams();
   const totalQuantity = getQuantityById(id);
 
   useEffect(() => {
-    let productoSeleccionado = products.find((item) => item.id === +id);
-    const tarea = new Promise((res, rej) => {
-      res(productoSeleccionado);
-    });
-    tarea.then((res) => setProduct(res));
+    let productsCollection = collection(db, "products");
+    let productRef = doc(productsCollection, id);
+
+    getDoc(productRef)
+      .then((res) => {
+        setProduct({ ...res.data(), id: res.id });
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error al obtener el producto:", error);
+        setLoading(false);
+      });
   }, [id]);
 
-  const onAdd = (cantidad) => {
+  const onAdd = (cantidad) => { console.log("Cantidad seleccionada:", cantidad);
+  console.log("Stock del producto:", product.stock);
+console.log(totalQuantity , "cantidad total");
     let productCart = { ...product, quantity: cantidad };
     addToCart(productCart);
     Swal.fire({
@@ -36,23 +55,39 @@ const ItemDetail = () => {
       iconColor: "#30a700",
     });
   };
+  console.log(product.stock);
 
   return (
     <div className={styles.itemDetailContainer}>
-      <div className={styles.itemDetail}>
-        <div className={styles.productImage}>
-          <img src={product.image_link} alt={product.name} />
+      {loading ? (
+        <div style={loaderStyles}>
+          <DotLoader color="#b67484" size={80} />
         </div>
-        <div className={styles.productInfo}>
-          <div className={styles.productName}>{product.name}</div>
-          <div className={styles.productPrice}>${product.price}</div>
-          <CounterContainer
-            stock={product.stock}
-            onAdd={onAdd}
-            initial={totalQuantity}
-          />
+      ) : (
+        <div className={styles.itemDetail}>
+          <div className={styles.productImage}>
+            <img src={product.image_link} alt={product.name} />
+          </div>
+          <div className={styles.productInfo}>
+            <div className={styles.productName}>{product.name}</div>
+            <div className={styles.productPrice}>${product.price}</div>
+            {(typeof totalQuantity === "undefined" ||
+              product.stock > totalQuantity) &&
+              product.stock > 0 && (
+                <CounterContainer
+                  stock={product.stock}
+                  onAdd={onAdd}
+                  initial={totalQuantity}
+                />
+              )}{" "}
+            {product.stock === 0 && <h2>No hay stock</h2>}
+            {typeof totalQuantity !== "undefined" &&
+              totalQuantity === product.stock && (
+                <h2>tenes las maximas cantidades en el carrito</h2>
+              )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -38,6 +38,7 @@
 }
 
 .navLink {
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
@@ -46,6 +47,36 @@
   outline: none;
   cursor: pointer;
   font-size: 16px;
+  padding-bottom: 3px; 
+  transition: color 0.3s ease, padding 0.3s ease;
+}
+
+.navLink::before,
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px; 
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.navLink::before {
+  transform-origin: left;
+  right: auto;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.navLink:hover::before,
+.navLink:hover::after {
+  transform: scaleX(1);
 }
 
 @media (max-width: 1139px) {

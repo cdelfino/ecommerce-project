@@ -8,20 +8,21 @@ const CartContextComponent = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    const exists = isInCart(item.id);
-
-    if (exists) {
-      let updatedArray = cart.map((product) => {
-        if (product.id === item.id) {
-          return { ...product, quantity: product.quantity + item.quantity };
-        } else {
-          return product;
-        }
-      });
-      setCart(updatedArray);
-    } else {
-      setCart([...cart, item]);
-    }
+    setCart((prevCart) => {
+      const existe = isInCart(item.id);
+      if (existe) {
+        let newArray = prevCart.map((elemento) => {
+          if (elemento.id === item.id) {
+            return { ...elemento, quantity: item.quantity };
+          } else {
+            return elemento;
+          }
+        });
+        return newArray;
+      } else {
+        return [...prevCart, item];
+      }
+    });
   };
 
   const clearCart = () => {
@@ -53,7 +54,7 @@ const CartContextComponent = ({ children }) => {
   };
 
   const getQuantityById = (id) => {
-    const product = cart.find((product) => product.id === +id);
+    const product = cart.find((product) => product.id === id);
     return product?.quantity;
   };
 

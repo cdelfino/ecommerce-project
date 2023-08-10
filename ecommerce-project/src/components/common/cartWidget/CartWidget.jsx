@@ -14,7 +14,11 @@ const CartWidget = () => {
           alt=""
           className={styles.cartImage}
         />
-        {total > 0 && <div className={styles.circle}>{total}</div>}
+        {total > 0 && (
+          <div className={styles.circle}>
+            <span>{total}</span>
+          </div>
+        )}
       </div>
     </Link>
   );

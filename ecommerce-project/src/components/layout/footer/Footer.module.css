@@ -1,5 +1,115 @@
-.footerContainer {
-    width: 100%;
-    background-color: rgb(228, 228, 228);
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #b67484;
+}
 
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  width: 60%;
+  color: white;
+}
+
+.footerColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.columnList {
+  display: flex;
+}
+
+.footerLogo {
+  margin-bottom: 30px;
+}
+
+.footerText {
+  margin-bottom: 30px;
+}
+
+.footerSocialIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.footerSocialSpan {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footerSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.footerTitle {
+  margin-bottom: 20px;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+}
+
+.footerList li {
+  margin-bottom: 12px;
+  color: white !important;
+  text-transform: capitalize;
+}
+
+.footerList li a {
+  color: white !important;
+}
+
+.footerLabel {
+  font-size: 14px;
+  color: #7e7e7e;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.subscribe {
+  margin-top: 17px;
+  width: fit-content;
+  background-color: white;
+  border-radius: 5px;
+}.subscribeInput:focus {
+  outline: none; /* Elimina el resaltado predeterminado */
+  border-color: #ccc; /* Cambia el color del borde cuando se hace clic */
+  box-shadow: none; /* Elimina cualquier sombra predeterminada */
+}
+
+.subscribeInput {
+  background-color: white !important;
+  border-radius: 5px;
+}
+
+.subscribeInput fieldset {
+  border: none;
+}
+
+.sendButton {
+  height: 56px;
+  border: none;
+  padding: 0 11px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
 }

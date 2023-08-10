@@ -1,3 +1,4 @@
+// Navbar.jsx
 import CartWidget from "../../common/cartWidget/CartWidget";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
@@ -67,9 +68,8 @@ const Navbar = () => {
             </button>
           </li>
         </div>
-        
-          <CartWidget className={styles.navLink}/>
-      
+
+        <CartWidget className={styles.navLink} />
       </div>
     </div>
   );

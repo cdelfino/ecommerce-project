@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
 import styles from "./CartContainer.module.css";
+import { Link } from "react-router-dom";
 
 const CartContainer = () => {
   const { cart, clearCart, deleteById, getTotalPrice } =
@@ -19,7 +20,7 @@ const CartContainer = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Sí, eliminar",
-      iconHtml: '<span style="color: #ff646e ;">!</span>', // Estilo personalizado para el icono
+      iconHtml: '<span style="color: #ff646e ;">!</span>',
     }).then((result) => {
       if (result.isConfirmed) {
         clearCart();
@@ -49,7 +50,7 @@ const CartContainer = () => {
           <div>
             <button onClick={clear}>Limpiar carrito</button>
             <h2>El total es: ${total}</h2>
-          </div>
+            <Link to="/ecommerce-project/checkout">Finalizar compra</Link></div>
         </>
       )}
     </div>
