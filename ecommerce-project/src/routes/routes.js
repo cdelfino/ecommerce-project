@@ -2,7 +2,7 @@ import ItemListContainer from "../components/page/itemList/ItemListContainer";
 import CartContainer from "../components/page/cart/CartContainer";
 import ItemDetail from "../components/page/itemDetail/ItemDetail";
 import CheckoutContainer from "../components/page/checkout/CheckoutContainer";
-import Dashboard from "../components/page/dashboard/dashboard";
+import Dashboard from "../components/page/dashboard/Dashboard";
 
 export const routes = [
   {
