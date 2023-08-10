@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from "./Footer.module.css";
 import { Formik, Form } from "formik";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
@@ -6,15 +7,25 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { TextField } from "@mui/material";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Footer = () => {
   const handleSubmit = (values) => {
+    Swal.fire({
+      icon: "success",
+      text: "¡Te has suscrito al newsletter exitosamente!",
+      toast: true,
+      position: "bottom-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      iconColor: "#30a700",
+    });
     const subscriberInfo = {
       email: values.email,
       subscribedDate: new Date().toLocaleDateString(),
       company: "Essence",
     };
-    console.log(subscriberInfo);
   };
 
   return (
@@ -116,7 +127,6 @@ const Footer = () => {
                       style: { color: "#0E0E0E" },
                     }}
                     id="outlined-basic"
-                    label="Outlined"
                     type="email"
                     name="email"
                     placeholder="Ingresa tu email"

@@ -5,8 +5,7 @@ import Swal from "sweetalert2";
 
 const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
   const [counter, setCounter] = useState(initial);
-console.log(stock)
-console.log(counter)
+
   const sumar = () => {
     counter < stock
       ? setCounter(counter + 1)

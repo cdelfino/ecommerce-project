@@ -11,7 +11,7 @@ const AppRouter = () => {
           <Route key={id} path={path} element={<Element />} />
         ))}
       </Route>
-
+      
       <Route path="*" element={<Error404 />} />
     </Routes>
   );

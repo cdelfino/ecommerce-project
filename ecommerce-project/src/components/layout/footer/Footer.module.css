@@ -90,10 +90,6 @@
   width: fit-content;
   background-color: white;
   border-radius: 5px;
-}.subscribeInput:focus {
-  outline: none; /* Elimina el resaltado predeterminado */
-  border-color: #ccc; /* Cambia el color del borde cuando se hace clic */
-  box-shadow: none; /* Elimina cualquier sombra predeterminada */
 }
 
 .subscribeInput {

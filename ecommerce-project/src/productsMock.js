@@ -1,6 +1,5 @@
 export const products = [
   {
-    id: 1,
     name: "Maybelline Face Studio Master Hi-Light Light Booster Bronzer",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/991799d3e70b8856686979f8ff6dcfe0_ra,w158,h184_pa,w158,h184.png",
@@ -10,7 +9,6 @@ export const products = [
     category: "bronzers",
   },
   {
-    id: 2,
     name: "Maybelline Fit Me Bronzer",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/d4f7d82b4858c622bb3c1cef07b9d850_ra,w158,h184_pa,w158,h184.png",
@@ -20,7 +18,6 @@ export const products = [
     category: "bronzers",
   },
   {
-    id: 3,
     name: "Maybelline Facestudio Master Contour Kit",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/4f731de249cbd4cb819ea7f5f4cfb5c3_ra,w158,h184_pa,w158,h184.png",
@@ -30,7 +27,6 @@ export const products = [
     category: "sombras",
   },
   {
-    id: 4,
     name: "Maybelline Face Studio Master Hi-Light Light Booster Blush",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/4621032a92cb428ad640c105b944b39c_ra,w158,h184_pa,w158,h184.png",
@@ -40,7 +36,6 @@ export const products = [
     category: "rubores",
   },
   {
-    id: 5,
     name: "Maybelline Fit Me Blush",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/53d5f825461117c0d96946e1029510b0_ra,w158,h184_pa,w158,h184.png",
@@ -50,7 +45,6 @@ export const products = [
     category: "rubores",
   },
   {
-    id: 6,
     name: "Maybelline Color Sensational Lipliner",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/6607c1b7eb717dfbd3c228b61e4c5148_ra,w158,h184_pa,w158,h184.png",
@@ -60,7 +54,6 @@ export const products = [
     category: "labiales",
   },
   {
-    id: 7,
     name: "Maybelline Dream Smooth Mousse Foundation",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/fb79e7facf701176d4113527c284613f_ra,w158,h184_pa,w158,h184.png",
@@ -70,7 +63,6 @@ export const products = [
     category: "bases",
   },
   {
-    id: 8,
     name: "Maybelline Fit Me Shine-Free Foundation Stick",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/d04e7c2ed65dabe1dca4eed9aa268e95_ra,w158,h184_pa,w158,h184.png",
@@ -80,7 +72,6 @@ export const products = [
     category: "bases",
   },
   {
-    id: 9,
     name: "Maybelline Dream Matte Mousse Foundation",
     image_link:
       "https://d3t32hsnjxo7q6.cloudfront.net/i/029889b345c76a70e8bb978b73ed1a87_ra,w158,h184_pa,w158,h184.png",
@@ -90,7 +81,6 @@ export const products = [
     category: "bases",
   },
   {
-    id: 10,
     brand: "maybelline",
     name: "Maybelline Dream Velvet Foundation",
     price: 9899,
@@ -100,7 +90,6 @@ export const products = [
     category: "bases",
   },
   {
-    id: 11,
     brand: "maybelline",
     name: "Maybelline Superstay Better Skin Foundation",
     price: 7399,
@@ -110,7 +99,6 @@ export const products = [
     category: "bases",
   },
   {
-    id: 12,
     brand: "maybelline",
     name: "Maybelline Dream Wonder Liquid Touch Foundation",
     price: 7399,
@@ -120,7 +108,6 @@ export const products = [
     category: "bases",
   },
   {
-    id: 13,
     brand: "clinique",
     name: "Even Better™ Compact Makeup Broad Spectrum SPF 15",
     price: 7399,
@@ -130,7 +117,6 @@ export const products = [
     stock: 36,
   },
   {
-    id: 14,
     brand: "clinique",
     name: "Redness Solutions Makeup Broad Spectrum SPF 15 With Probiotic Technology",
     price: 9299,
@@ -140,7 +126,6 @@ export const products = [
     stock: 42,
   },
   {
-    id: 15,
     brand: "clinique",
     name: "Stay-Matte Oil-Free Makeup",
     price: 9999,
@@ -150,7 +135,6 @@ export const products = [
     stock: 20,
   },
   {
-    id: 16,
     brand: "clinique",
     name: "Repairwear Laser Focus™ All-Smooth Makeup Broad Spectrum SPF 15",
     price: 10399,
@@ -160,7 +144,6 @@ export const products = [
     stock: 50,
   },
   {
-    id: 17,
     brand: "clinique",
     name: "Perfectly Real™ Compact Makeup",
     price: 8699,
@@ -170,7 +153,6 @@ export const products = [
     stock: 30,
   },
   {
-    id: 18,
     brand: "clinique",
     name: "Chubby in the Nude™ Foundation Stick",
     price: 8999,
@@ -180,7 +162,6 @@ export const products = [
     stock: 55,
   },
   {
-    id: 19,
     brand: "clinique",
     name: "Super City Block™ BB Cushion Compact Broad Spectrum SPF 50",
     price: 8299,
@@ -190,7 +171,6 @@ export const products = [
     stock: 40,
   },
   {
-    id: 20,
     brand: "clinique",
     name: "Superpowder Double Face Makeup",
     price: 8999,
@@ -200,7 +180,6 @@ export const products = [
     stock: 38,
   },
   {
-    id: 21,
     brand: "clinique",
     name: "Perfectly Real™ Makeup",
     price: 7999,
@@ -210,7 +189,6 @@ export const products = [
     stock: 22,
   },
   {
-    id: 22,
     brand: "clinique",
     name: "Beyond Perfecting™ Powder Foundation + Concealer",
     price: 8999,
@@ -220,7 +198,6 @@ export const products = [
     stock: 48,
   },
   {
-    id: 23,
     brand: "clinique",
     name: "Acne Solutions™ Liquid Makeup",
     price: 8299,

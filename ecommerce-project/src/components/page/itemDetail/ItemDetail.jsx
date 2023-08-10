@@ -14,7 +14,7 @@ const ItemDetail = () => {
   const { addToCart, getQuantityById } = useContext(CartContext);
 
   const [product, setProduct] = useState({});
-  const [loading, setLoading] = useState(true); // Agrega el estado de carga
+  const [loading, setLoading] = useState(true); 
   const loaderStyles = {
     display: "flex",
     alignItems: "center",
@@ -39,9 +39,7 @@ const ItemDetail = () => {
       });
   }, [id]);
 
-  const onAdd = (cantidad) => { console.log("Cantidad seleccionada:", cantidad);
-  console.log("Stock del producto:", product.stock);
-console.log(totalQuantity , "cantidad total");
+  const onAdd = (cantidad) => {
     let productCart = { ...product, quantity: cantidad };
     addToCart(productCart);
     Swal.fire({
@@ -55,7 +53,6 @@ console.log(totalQuantity , "cantidad total");
       iconColor: "#30a700",
     });
   };
-  console.log(product.stock);
 
   return (
     <div className={styles.itemDetailContainer}>

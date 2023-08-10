@@ -29,9 +29,14 @@ const CheckoutContainer = () => {
 
     onSubmit: (data) => {
       let order = { buyer: data, items: cart, total, date: serverTimestamp() };
-      console.log(order);
       const ordersCollection = collection(db, "orders");
       addDoc(ordersCollection, order).then((res) => setOrderId(res.id));
+
+      cart.forEach((product) => {
+        updateDoc(doc(db, "products", product.id), {
+          stock: product.stock - product.quantity,
+        });
+      });
     },
 
     validationSchema: Yup.object({
