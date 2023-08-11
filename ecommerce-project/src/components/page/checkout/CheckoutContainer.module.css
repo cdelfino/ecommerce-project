@@ -18,8 +18,8 @@
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
-  min-height: 50vh;
-  gap: 40px;
+  min-height: 60vh;
+  gap: 15px;
 }
 
 .inputField {
@@ -41,4 +41,61 @@
   height: 60px;
   background-color: #b67484 !important;
   font-family: "Muli", cursive !important;
+}
+
+/*Confirmation message/*/
+
+.fadeOutAnimation {
+  overflow-x: hidden;
+  animation: fadeOut 6s ease-out, fadeOutOpacity 6s ease-in;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutOpacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.backButton {
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 25px;
+  font-size: 19px;
+  padding: 12px 35px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  width: fit-content;
+}
+.orderConfirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.orderConfirmation img {
+  width: 170px;
+}
+
+.textContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

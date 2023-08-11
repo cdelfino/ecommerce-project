@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   height: 87vh;
+  margin: 30px 0;
 }
 
 .itemDetail {
@@ -52,4 +53,24 @@
 
 .counterContainer {
   margin-top: 20px;
+}
+@media (max-width: 954px) {
+
+  .itemDetail {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .productImage {
+    margin-right: 0;
+  }
+
+  .productName {
+    text-align: center;
+  }
+
+  .productInfo {
+    align-items: center;
+  }
+
 }

@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 
-
 const Footer = () => {
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
@@ -18,6 +17,7 @@ const Footer = () => {
     },
 
     onSubmit: (data) => {
+      console.log("se guardo");
       Swal.fire({
         icon: "success",
         text: "¡Te has suscrito al newsletter exitosamente!",
@@ -37,9 +37,10 @@ const Footer = () => {
 
     validationSchema: Yup.object({
       email: Yup.string()
-        .email("El email debe contener @")
-        .required("Este campo es obligatorio."),
+        .required("Este campo no puede estar vacío")
+        .email("El email debe contener @"),
     }),
+    validateOnChange: false,
   });
 
   return (
@@ -63,7 +64,7 @@ const Footer = () => {
             </p>
           </div>
           <div className={styles.footerSocialIcons}>
-            <span>Síguenos en nuestras redes sociales</span>
+            <h3>Síguenos en nuestras redes sociales</h3>
             <div>
               <a href="">
                 <FacebookRoundedIcon
@@ -91,33 +92,33 @@ const Footer = () => {
                 <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">about</a>
+                <a href="#">Bases</a>
               </li>
               <li>
-                <a href="#">services</a>
+                <a href="#">Sombras</a>
               </li>
               <li>
-                <a href="#">portfolio</a>
+                <a href="#">Labiales</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#">Rubores</a>
               </li>
             </ul>
             <ul className={styles.footerList}>
               <li>
-                <a href="#">About us</a>
+                <a href="#">Carrito</a>
               </li>
               <li>
-                <a href="#">Our Services</a>
+                <a href="#">Sobre nosotros</a>
               </li>
               <li>
-                <a href="#">Expert Team</a>
+                <a href="#">Nuestros servicios</a>
               </li>
               <li>
-                <a href="#">Contact us</a>
+                <a href="#">Contáctanos</a>
               </li>
               <li>
-                <a href="#">Latest News</a>
+                <a href="#">Newsletter</a>
               </li>
             </ul>
           </div>
@@ -146,6 +147,7 @@ const Footer = () => {
                     placeholder="Ingresa tu email"
                     helperText={errors.email}
                     error={errors.email ? true : false}
+                    onChange={handleChange}
                   />
                   <Button className={styles.sendButton} type="submit">
                     <SendRoundedIcon fontSize="large" />

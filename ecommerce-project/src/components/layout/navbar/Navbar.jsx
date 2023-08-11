@@ -1,13 +1,24 @@
-// Navbar.jsx
 import CartWidget from "../../common/cartWidget/CartWidget";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className={styles.navigation}>
       <div className={styles.navContainer}>
+        {" "}
+        <div className={styles.menuIcon} onClick={handleMenuToggle}>
+          <MenuRoundedIcon fontSize="large" sx={{ color: "#ffffff" }} />
+        </div>
         <div className={styles.brand}>
           <Link to="/ecommerce-project/">
             <img
@@ -17,8 +28,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-
-        <div className={styles.navList}>
+        <div className={`${styles.navList} ${menuOpen ? styles.open : ""}`}>
           <li className={styles.navListItem}>
             <button
               onClick={() => navigate("/ecommerce-project")}
@@ -60,7 +70,6 @@ const Navbar = () => {
             </button>
           </li>
         </div>
-
         <CartWidget className={styles.navLink} />
       </div>
     </div>

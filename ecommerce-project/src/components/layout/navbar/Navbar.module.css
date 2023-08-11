@@ -7,10 +7,14 @@
 
 .navContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 80%;
   padding: 10px;
+}
+
+.brand {
+  z-index: 4;
 }
 
 .brand img {
@@ -18,9 +22,9 @@
   max-width: 100%;
 }
 
-.navList {
-  display: flex;
-  align-items: center;
+.menuIcon {
+  display: none;
+  cursor: pointer;
 }
 
 .navList {
@@ -29,7 +33,6 @@
   margin: 0;
   padding: 0;
   align-items: center;
-  flex-grow: 1;
   justify-content: center;
 }
 
@@ -47,7 +50,7 @@
   outline: none;
   cursor: pointer;
   font-size: 16px;
-  padding-bottom: 3px; 
+  padding-bottom: 3px;
   transition: color 0.3s ease, padding 0.3s ease;
 }
 
@@ -58,7 +61,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 1px; 
+  height: 1px;
   background-color: white;
   transform: scaleX(0);
   transform-origin: center;
@@ -80,22 +83,28 @@
 }
 
 @media (max-width: 1139px) {
-  .navContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
+  .menuIcon {
+    display: block;
+    z-index: 7;
   }
 
   .navList {
     display: none;
+  }
+
+  .navList.open {
+    transform: scaleY(1);
     flex-direction: column;
+    display: flex;
     position: absolute;
-    top: 100%;
     left: 0;
-    right: 0;
-    background-color: #f8f8f8;
-    padding: 10px;
+    top: 0;
+    font-size: 25px;
+    padding: 109px 0 19px 0;
+    width: 100%;
+    background-color: #b67484;
+    z-index: 1;
+    transition: transform 0.3s ease;
   }
 
   .navListItem {
