@@ -1,4 +1,143 @@
-.cartContainer{
-    width: 80%;
-    margin: 0 auto;
+.cart {
+  width: 80%;
+  margin: 90px auto;
+}
+.cartContainer {
+  background-color: white;
+  padding: 40px 55px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 19px 0px rgb(80 80 80 / 10%);
+  min-height: 50vh;
+}
+.cartContainer h1 {
+  margin-bottom: 20px;
+}
+
+.bar {
+  height: 0.5px;
+  margin: 10px 0;
+  transform: translateY(-50%);
+  background-color: rgb(215, 215, 215);
+}
+
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  font-weight: bold;
+  gap: 5px;
+  width: 60%;
+}
+
+.bar {
+  height: 0.5px;
+  margin: 10px 0;
+  transform: translateY(-50%);
+  background-color: rgb(215, 215, 215);
+  width: 100%;
+}
+
+.bar:nth-of-type(3) {
+  margin: 16px 0;
+  width: 110%;
+}
+
+.cartColumn {
+  display: grid;
+  grid-template-columns: 7fr 1fr 1fr 1fr 1fr;
+  align-items: flex-start;
+  gap: 19px;
+  justify-items: flex-end;
+  margin: 8px 0;
+}
+
+.productCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.productCol:first-child {
+  justify-self: start;
+}
+
+.cartButtons {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.clearCartButton {
+  border: 1px solid transparent;
+  font-size: 18px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: white;
+  padding: 2px 5px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.backButton {
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 25px;
+  font-size: 19px;
+  padding: 12px 35px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.checkoutInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  margin-top: 12px;
+  width: 30%;
+}
+
+.purchaseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 25px;
+  font-size: 22px;
+  padding: 12px 35px;
+  gap: 6px;
+  font-weight: bold;
+  background-color: rgb(50, 50, 50);
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.shipping {
+  text-decoration: line-through;
+  color: rgb(158, 158, 158);
+  font-weight: normal;
+}
+
+.price {
+  font-weight: normal;
+}
+
+.checkoutDetail {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
 }

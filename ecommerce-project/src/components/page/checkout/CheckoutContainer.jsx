@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Button, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -13,13 +14,38 @@ import {
   doc,
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const CheckoutContainer = () => {
   const [orderId, setOrderId] = useState("");
   const { cart, getTotalPrice } = useContext(CartContext);
 
   let total = getTotalPrice();
-
+  const popup = () => {
+    let timerInterval;
+    Swal.fire({
+      title: "Procesando su compra...",
+      html: "Esto solo tomará unos segundos.",
+      timer: 2000,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    }).then((result) => {
+      Swal.fire({
+        title: "¡Felicidades!",
+        html: "Su orden se ha generado correctamente.",
+        timerProgressBar: true,
+        icon: "success",
+        timer: 2000,
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      });
+    });
+  };
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
       name: "",
@@ -28,6 +54,7 @@ const CheckoutContainer = () => {
     },
 
     onSubmit: (data) => {
+      popup();
       let order = { buyer: data, items: cart, total, date: serverTimestamp() };
       const ordersCollection = collection(db, "orders");
       addDoc(ordersCollection, order).then((res) => setOrderId(res.id));

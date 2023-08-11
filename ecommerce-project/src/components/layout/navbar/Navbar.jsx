@@ -59,14 +59,6 @@ const Navbar = () => {
               Rubores
             </button>
           </li>
-          <li className={styles.navListItem}>
-            <button
-              onClick={() => navigate("/ecommerce-project/category/bronzers")}
-              className={styles.navLink}
-            >
-              Bronzers
-            </button>
-          </li>
         </div>
 
         <CartWidget className={styles.navLink} />

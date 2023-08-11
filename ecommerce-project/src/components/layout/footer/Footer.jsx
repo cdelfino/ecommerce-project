@@ -1,32 +1,46 @@
 /* eslint-disable no-unused-vars */
 import styles from "./Footer.module.css";
-import { Formik, Form } from "formik";
+import { Formik, Form, useFormik } from "formik";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import * as Yup from "yup";
+
 
 const Footer = () => {
-  const handleSubmit = (values) => {
-    Swal.fire({
-      icon: "success",
-      text: "¡Te has suscrito al newsletter exitosamente!",
-      toast: true,
-      position: "bottom-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      iconColor: "#30a700",
-    });
-    const subscriberInfo = {
-      email: values.email,
-      subscribedDate: new Date().toLocaleDateString(),
-      company: "Essence",
-    };
-  };
+  const { handleSubmit, handleChange, errors } = useFormik({
+    initialValues: {
+      email: "",
+    },
+
+    onSubmit: (data) => {
+      Swal.fire({
+        icon: "success",
+        text: "¡Te has suscrito al newsletter exitosamente!",
+        toast: true,
+        position: "bottom-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        iconColor: "#30a700",
+      });
+      const subscriberInfo = {
+        email: data.email,
+        subscribedDate: new Date().toLocaleDateString(),
+        company: "Essence",
+      };
+    },
+
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email("El email debe contener @")
+        .required("Este campo es obligatorio."),
+    }),
+  });
 
   return (
     <footer className={styles.footer}>
@@ -130,10 +144,12 @@ const Footer = () => {
                     type="email"
                     name="email"
                     placeholder="Ingresa tu email"
+                    helperText={errors.email}
+                    error={errors.email ? true : false}
                   />
-                  <button className={styles.sendButton} type="submit">
+                  <Button className={styles.sendButton} type="submit">
                     <SendRoundedIcon fontSize="large" />
-                  </button>
+                  </Button>
                 </div>
               </Form>
             </Formik>

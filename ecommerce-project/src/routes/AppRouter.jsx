@@ -12,7 +12,7 @@ const AppRouter = () => {
         ))}
       </Route>
       
-      <Route path="*" element={<Error404 />} />
+      <Route path="/ecommerce-project/*" element={<Error404 />} />
     </Routes>
   );
 };

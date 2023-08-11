@@ -1,23 +1,24 @@
 .form {
-  padding: 20px;
+  padding: 90px 0;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 80vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
-.formContainer{
+.formContainer {
   background-color: white;
-  padding: 55px 80px;
+  padding: 40px 55px;
   box-shadow: 2px 2px 19px 0px rgb(80 80 80 / 10%);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  width: 73%;
+  width: 80%;
   margin: 0 auto;
+  min-height: 50vh;
   gap: 40px;
 }
 

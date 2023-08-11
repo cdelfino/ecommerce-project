@@ -6,7 +6,7 @@ export const products = [
     brand: "maybelline",
     price: 7399,
     stock: 17,
-    category: "bronzers",
+    category: "rubores",
   },
   {
     name: "Maybelline Fit Me Bronzer",
@@ -15,7 +15,7 @@ export const products = [
     brand: "maybelline",
     price: 8699,
     stock: 34,
-    category: "bronzers",
+    category: "rubores",
   },
   {
     name: "Maybelline Facestudio Master Contour Kit",
