@@ -38,7 +38,7 @@ const Cart = ({ cart, clear, total }) => {
               </div>
             ))}
             <div className={styles.cartButtons}>
-              <div>
+              <div className={styles.mobileDisplay}>
                 <button className={styles.clearCartButton} onClick={clear}>
                   <DeleteOutlineRoundedIcon fontSize={"small"} />
                   <p>Limpiar carrito</p>

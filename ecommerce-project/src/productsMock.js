@@ -206,4 +206,49 @@ export const products = [
     category: "bases",
     stock: 25,
   },
+  {
+    brand: "saint cosmetics",
+    name: "Saint Cosmetics Blush",
+    image_link:
+      "https://d3t32hsnjxo7q6.cloudfront.net/i/ed6e230c6394a3c6d1904fcd02a4ae3a_ra,w158,h184_pa,w158,h184.png",
+    price: 5999,
+    category: "rubores",
+    stock: 78,
+  },
+  {
+    brand: "e.l.f.",
+    image_link:
+      "https://d3t32hsnjxo7q6.cloudfront.net/i/73da123512d4ca1f2aebf5149e065d86_ra,w158,h184_pa,w158,h184.jpg",
+    name: "e.l.f. Studio Blush Palette Dark",
+    price: 6499,
+    category: "rubores",
+    stock: 99,
+  },
+  {
+    brand: "e.l.f.",
+    image_link:
+      "https://d3t32hsnjxo7q6.cloudfront.net/i/9afdb02a47f0a04fe1f7aa78c5a49f63_ra,w158,h184_pa,w158,h184.jpg",
+    name: "e.l.f. Studio Blush Palette Light",
+    price: 7199,
+    category: "rubores",
+    stock: 99,
+  },
+  {
+    brand: "pure anada",
+    image_link:
+      "https://d3t32hsnjxo7q6.cloudfront.net/i/43071cd57ecffc55c1e0bff29278c3a7_ra,w158,h184_pa,w158,h184.jpeg",
+    name: "Pure Anada Pressed Mineral Cheek Colour Pan",
+    price: 6299,
+    category: "rubores",
+    stock: 99,
+  },
+  {
+    brand: "pacifica",
+    image_link:
+      "https://d3t32hsnjxo7q6.cloudfront.net/i/4395f2c09aebd1b8d8f183168bc5d00f_ra,w158,h184_pa,w158,h184.jpeg",
+    name: "Pacifica Radiant Shimmer Highlighting Creams For Eyes Lips Face",
+    price: 4899,
+    category: "rubores",
+    stock: 99,
+  },
 ];

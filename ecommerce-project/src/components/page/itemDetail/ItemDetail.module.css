@@ -73,4 +73,10 @@
     align-items: center;
   }
 
+}@media (max-width: 320px) {
+.productCard{
+  width: 100%;
 }
+
+}
+

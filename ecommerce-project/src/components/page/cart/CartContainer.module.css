@@ -94,6 +94,7 @@
   cursor: pointer;
   font-weight: bold;
   width: fit-content;
+  text-align: center;
 }
 
 .checkoutInfo {
@@ -140,4 +141,26 @@
   width: 100%;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+@media (max-width: 1042px) {
+  .cartColumn {
+    display: none;
+  }
+
+  .cartButtons {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .checkoutInfo {
+    width: 100%;
+  }
+
+  .mobileDisplay {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+  }
 }

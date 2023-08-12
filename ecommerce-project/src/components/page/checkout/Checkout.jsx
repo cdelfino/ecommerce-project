@@ -38,7 +38,7 @@ const Checkout = ({ orderId, errors, handleSubmit, handleChange }) => {
             </div>
             <Link to="/ecommerce-project" className={styles.backButton}>
               <ArrowBackIosRoundedIcon fontSize="small" />
-              Volver a comprar
+              <h4>Volver a comprar</h4>
             </Link>
             {confettiActive && (
               <Confetti
