@@ -17,7 +17,6 @@ const Footer = () => {
     },
 
     onSubmit: (data) => {
-      console.log("se guardo");
       Swal.fire({
         icon: "success",
         text: "¡Te has suscrito al newsletter exitosamente!",

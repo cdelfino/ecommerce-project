@@ -24,6 +24,7 @@ const ItemDetail = ({
           </div>
           <div className={styles.productInfo}>
             <div className={styles.productName}>{product.name}</div>
+            <div className={styles.productDescription}>{product.description}</div>
             <div className={styles.productPrice}>${product.price}</div>
             {(typeof totalQuantity === "undefined" ||
               product.stock > totalQuantity) &&

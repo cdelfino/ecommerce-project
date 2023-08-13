@@ -29,5 +29,4 @@ export const routes = [
     path: "/ecommerce-project/checkout",
     Element: CheckoutContainer,
   },
-
 ];
