@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
-import { Button, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import styles from "./CheckoutContainer.module.css";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseconfig";
@@ -13,13 +11,12 @@ import {
   updateDoc,
   doc,
 } from "firebase/firestore";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import Checkout from "./Checkout";
 
 const CheckoutContainer = () => {
   const [orderId, setOrderId] = useState("");
-  const { cart, getTotalPrice } = useContext(CartContext);
+  const { cart, getTotalPrice, clearCart } = useContext(CartContext);
 
   let total = getTotalPrice();
   const popup = () => {
@@ -34,7 +31,7 @@ const CheckoutContainer = () => {
       willClose: () => {
         clearInterval(timerInterval);
       },
-    })
+    });
   };
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
@@ -54,6 +51,9 @@ const CheckoutContainer = () => {
           stock: product.stock - product.quantity,
         });
       });
+
+      clearCart();
+
     },
 
     validationSchema: Yup.object({
